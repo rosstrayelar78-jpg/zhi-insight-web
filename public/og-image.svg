@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a1a2e"/>
+      <stop offset="100%" stop-color="#16213e"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <!-- Grid pattern -->
+  <g opacity="0.03">
+    <path d="M0 60H1200M0 120H1200M0 180H1200M0 240H1200M0 300H1200M0 360H1200M0 420H1200M0 480H1200M0 540H1200M0 600H1200" stroke="white" stroke-width="1"/>
+    <path d="M60 0V630M120 0V630M180 0V630M240 0V630M300 0V630M360 0V630M420 0V630M480 0V630M540 0V630M600 0V630M660 0V630M720 0V630M780 0V630M840 0V630M900 0V630M960 0V630M1020 0V630M1080 0V630M1140 0V630" stroke="white" stroke-width="1"/>
+  </g>
+  <!-- Brand name -->
+  <text x="600" y="270" font-family="Noto Sans SC, sans-serif" font-size="72" font-weight="700" fill="white" text-anchor="middle">知璟远珩</text>
+  <!-- English name -->
+  <text x="600" y="340" font-family="Inter, sans-serif" font-size="32" font-weight="400" fill="#8888aa" text-anchor="middle" letter-spacing="8">ZHI INSIGHT</text>
+  <!-- Formula -->
+  <text x="600" y="420" font-family="monospace" font-size="28" fill="#e94560" text-anchor="middle">V = P × J × A</text>
+  <!-- Slogan -->
+  <text x="600" y="470" font-family="Noto Sans SC, sans-serif" font-size="20" fill="#666688" text-anchor="middle">识局 · 判势 · 定策 · 成事</text>
+  <!-- Tagline -->
+  <text x="600" y="530" font-family="Noto Sans SC, sans-serif" font-size="18" fill="#555577" text-anchor="middle">AI 时代的产业智库</text>
+</svg>
