@@ -1,12 +1,38 @@
 import Link from "next/link";
+import {
+  Bot,
+  Building2,
+  Check,
+  DraftingCompass,
+  Focus,
+  HeartHandshake,
+  LibraryBig,
+  Route,
+  Scale,
+  type LucideIcon,
+} from "lucide-react";
 import { siteConfig } from "@/lib/site";
 import {
   capabilities,
-  researchTracks,
+  coreBusinesses,
   articles,
   topics,
 } from "@/lib/content";
 import SectionHeading from "@/components/SectionHeading";
+
+const capabilityIcons: Record<string, LucideIcon> = {
+  focus: Focus,
+  scale: Scale,
+  "drafting-compass": DraftingCompass,
+  route: Route,
+};
+
+const businessIcons: Record<string, LucideIcon> = {
+  "building-2": Building2,
+  "heart-handshake": HeartHandshake,
+  bot: Bot,
+  "library-big": LibraryBig,
+};
 
 // ─── Module 1: Hero ──────────────────────
 function Hero() {
@@ -29,9 +55,12 @@ function Hero() {
           <h1 className="text-white leading-tight mb-6">
             {siteConfig.name}
             <span className="block text-2xl md:text-3xl mt-2 font-normal text-gray-300">
-              {siteConfig.tagline}
+              城市更新 · 银发经济 · AI产业研究
             </span>
           </h1>
+          <p className="text-gray-300 text-base md:text-lg">
+            {siteConfig.tagline}
+          </p>
 
           {/* Core Formula */}
           <div className="my-10 p-6 bg-white/5 border border-white/10 rounded-lg inline-block backdrop-blur-sm">
@@ -44,10 +73,10 @@ function Hero() {
           {/* CTA Buttons */}
           <div className="flex flex-wrap gap-4 mt-8">
             <Link
-              href="/research"
+              href="/services"
               className="inline-flex items-center px-7 py-3 bg-accent hover:bg-accent-hover text-white rounded transition-colors font-medium text-sm"
             >
-              探索研究方向 →
+              查看服务能力 →
             </Link>
             <Link
               href="/about"
@@ -98,7 +127,7 @@ function EraBackground() {
           </div>
         </div>
         <p className="text-center text-xl font-semibold text-primary mt-10">
-          知璟远珩，为捍卫这种稀缺而存在。
+          知璟远珩，致力于在 AI 时代提供稀缺的产业判断力。
         </p>
       </div>
     </section>
@@ -113,57 +142,89 @@ function Capabilities() {
         <SectionHeading title="我们的能力" />
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {capabilities.map((cap) => (
-            <div
-              key={cap.title}
-              className="group p-7 bg-bg-warm rounded-card border border-border-light hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300"
-            >
-              <span className="text-3xl mb-4 block">{cap.icon}</span>
-              <h3 className="font-bold text-lg mb-2 group-hover:text-accent transition-colors">
-                {cap.title}
-              </h3>
-              <p className="text-text-secondary text-sm leading-relaxed">{cap.desc}</p>
-            </div>
-          ))}
+          {capabilities.map((cap) => {
+            const Icon = capabilityIcons[cap.icon] ?? Focus;
+            return (
+              <div
+                key={cap.title}
+                className="group p-7 bg-bg-warm rounded-card border border-border-light hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300"
+              >
+                <Icon
+                  className="w-7 h-7 mb-4 text-accent"
+                  aria-hidden="true"
+                />
+                <h3 className="font-bold text-lg mb-2 group-hover:text-accent transition-colors">
+                  {cap.title}
+                </h3>
+                <p className="text-text-secondary text-sm leading-relaxed">
+                  {cap.desc}
+                </p>
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>
   );
 }
 
-// ─── Module 4: 研究方向 ──────────────────
-function ResearchTracksPreview() {
+// ─── Module 4: 四大核心业务 ──────────────
+function CoreBusinesses() {
   return (
     <section className="bg-bg-warm section-padding">
       <div className="container-main">
         <SectionHeading
-          title="研究方向"
-          subtitle="覆盖十大产业赛道 · 持续追踪结构变化"
+          title="四大核心业务"
+          subtitle="研究、咨询与交付协同，为客户形成可执行的产业策略"
         />
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
-          {researchTracks.map((track) => (
-            <Link
-              key={track.slug}
-              href="/research"
-              className="group block p-5 bg-bg-white rounded-card border border-border-light hover:border-accent/30 hover:shadow-card-hover transition-all duration-300"
-            >
-              <h3 className="font-bold text-sm group-hover:text-accent transition-colors mb-2">
-                {track.title}
-              </h3>
-              <p className="text-text-muted text-xs leading-relaxed line-clamp-3">
-                {track.desc.length > 60 ? track.desc.slice(0, 60) + "…" : track.desc}
-              </p>
-            </Link>
-          ))}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          {coreBusinesses.map((business) => {
+            const Icon = businessIcons[business.icon] ?? Building2;
+            return (
+              <Link
+                key={business.slug}
+                href={`/services#${business.slug}`}
+                className="group block p-7 md:p-8 bg-bg-white rounded-card border border-border-light hover:border-accent/30 hover:shadow-card-hover transition-all duration-300"
+              >
+                <div className="flex items-start gap-4 mb-4">
+                  <span className="shrink-0 w-11 h-11 flex items-center justify-center bg-accent/10 text-accent rounded-card">
+                    <Icon className="w-6 h-6" aria-hidden="true" />
+                  </span>
+                  <div>
+                    <h3 className="font-bold text-lg group-hover:text-accent transition-colors mb-2">
+                      {business.title}
+                    </h3>
+                    <p className="text-text-secondary text-sm leading-relaxed">
+                      {business.desc}
+                    </p>
+                  </div>
+                </div>
+                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 pt-4 border-t border-border-light">
+                  {business.services.map((service) => (
+                    <li
+                      key={service}
+                      className="flex items-start gap-2 text-xs text-text-secondary"
+                    >
+                      <Check
+                        className="w-3.5 h-3.5 mt-0.5 text-accent shrink-0"
+                        aria-hidden="true"
+                      />
+                      <span>{service}</span>
+                    </li>
+                  ))}
+                </ul>
+              </Link>
+            );
+          })}
         </div>
 
         <div className="text-center mt-10">
           <Link
-            href="/research"
+            href="/services"
             className="inline-flex items-center text-sm text-accent hover:text-accent-hover font-medium"
           >
-            查看完整研究方向 →
+            查看完整服务能力 →
           </Link>
         </div>
       </div>
@@ -237,7 +298,7 @@ function FeaturedTopics() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
               <div className="absolute inset-0 flex flex-col justify-end p-6">
                 <span className="inline-block self-start px-2.5 py-0.5 bg-accent/20 text-accent text-[11px] font-medium rounded mb-3">
-                  {topic.status} · 已发布 {topic.articleCount} 篇
+                  {topic.status}
                 </span>
                 <h3 className="text-white font-bold text-lg leading-snug group-hover:underline decoration-accent underline-offset-4">
                   {topic.title}
@@ -270,7 +331,7 @@ function AboutPreview() {
       <div className="container-main max-w-3xl text-center">
         <h2 className="mb-6">{siteConfig.name}</h2>
         <p className="text-gray-300 text-base md:text-lg leading-relaxed mb-6">
-          {siteConfig.name}（{siteConfig.nameEn}）是一家面向 AI 时代的新型产业智库。
+          {siteConfig.name}是一家聚焦城市更新、银发经济、AI产业研究与产业认知资产建设的产业研究型咨询机构。
         </p>
         <p className="text-gray-300 leading-relaxed mb-8">
           我们相信：<span className="text-white font-semibold">价值创造 = 问题质量 × 判断能力 × 行动能力</span>。
@@ -331,7 +392,7 @@ export default function HomePage() {
       <Hero />
       <EraBackground />
       <Capabilities />
-      <ResearchTracksPreview />
+      <CoreBusinesses />
       <LatestArticles />
       <FeaturedTopics />
       <AboutPreview />

@@ -38,8 +38,13 @@ export default function Footer() {
           <div className="md:col-span-1">
             <div className="text-sm space-y-2">
               <p>
-                <span className="text-gray-500">邮箱：</span>
-                {siteConfig.email}
+                <span className="text-gray-500">商务合作：</span>
+                <a
+                  href={`mailto:${siteConfig.email}`}
+                  className="hover:text-white transition-colors break-all"
+                >
+                  {siteConfig.email}
+                </a>
               </p>
               <p>
                 <span className="text-gray-500">微信公众号：</span>
@@ -52,8 +57,20 @@ export default function Footer() {
 
       {/* Bottom bar */}
       <div className="border-t border-white/5">
-        <div className="container-main py-5 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-gray-500">
-          <p>© {year} {siteConfig.name} {siteConfig.nameEn}. All rights reserved.</p>
+        <div className="container-main py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-gray-500">
+          <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4">
+            <p>© {year} {siteConfig.companyName}</p>
+            {siteConfig.icpNumber && (
+              <a
+                href="https://beian.miit.gov.cn/"
+                target="_blank"
+                rel="noreferrer"
+                className="hover:text-white transition-colors"
+              >
+                {siteConfig.icpNumber}
+              </a>
+            )}
+          </div>
           <p>V = P × J × A</p>
         </div>
       </div>

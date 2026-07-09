@@ -25,8 +25,8 @@ const jsonLd = {
     {
       "@type": "Organization",
       "@id": `${siteConfig.url}/#organization`,
-      name: `${siteConfig.name} ${siteConfig.nameEn}`,
-      alternateName: siteConfig.nameEn,
+      name: siteConfig.companyName,
+      alternateName: [siteConfig.name, siteConfig.nameEn],
       url: siteConfig.url,
       logo: `${siteConfig.url}/logo.png`,
       founder: {
@@ -70,7 +70,7 @@ export const metadata: Metadata = {
     description: pageMetadata.home.description,
     images: [
       {
-        url: "/og-image.svg",
+        url: "/og-image.png",
         width: 1200,
         height: 630,
         alt: `${siteConfig.name} ${siteConfig.nameEn}`,
@@ -81,7 +81,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: pageMetadata.home.title,
     description: pageMetadata.home.description,
-    images: ["/og-image.svg"],
+    images: ["/og-image.png"],
   },
   robots: {
     index: true,

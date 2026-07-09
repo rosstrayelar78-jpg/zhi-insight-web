@@ -5,7 +5,7 @@ import SectionHeading from "@/components/SectionHeading";
 
 export const metadata: Metadata = {
   title: `产业专题 — ${siteConfig.name} ${siteConfig.nameEn}`,
-  description: `${siteConfig.name}深度专题系列：持续追踪、系统研究、不止于表面。覆盖银发经济、AI 产业、城市更新、机器人、新质生产力等核心赛道。`,
+  description: `${siteConfig.name}深度专题系列：围绕银发经济、AI产业、城市更新与产业认知资产开展持续研究。`,
   alternates: {
     canonical: "/topics",
   },
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 const statusColor: Record<string, string> = {
   "持续更新中": "bg-green-500/15 text-green-600",
   "筹备中": "bg-yellow-500/15 text-yellow-700",
-  "年度旗舰": "bg-accent/15 text-accent",
+  "年度研究": "bg-accent/15 text-accent",
 };
 
 export default function TopicsPage() {
@@ -60,7 +60,7 @@ export default function TopicsPage() {
                 </p>
                 <div className="flex items-center justify-between pt-4 border-t border-border-light">
                   <span className="text-xs text-text-muted">
-                    已发布 {topic.articleCount} 篇文章
+                    专题研究
                   </span>
                   <a
                     href="/insights"

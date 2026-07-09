@@ -43,8 +43,8 @@ export default function InsightsPage() {
         <div className="container-main max-w-4xl">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
             {[
-              { name: "深度研究", desc: "月度产业深度报告 & 白皮书" },
-              { name: "趋势速读", desc: "每周趋势信号 & 赛道观察" },
+              { name: "深度研究", desc: "产业深度报告 & 专题观察" },
+              { name: "趋势速读", desc: "趋势信号 & 赛道观察" },
               { name: "方法工具", desc: "研究框架 & 思维模型分享" },
               { name: "知璟对话", desc: "创始人专栏 & 行业访谈" },
             ].map((cat) => (
@@ -104,7 +104,7 @@ export default function InsightsPage() {
           <div className="mt-12 p-8 bg-bg-white rounded-card border border-dashed border-border-light text-center">
             <p className="text-text-muted text-sm">
               更多文章正在筹备中……<br />
-              首批 10+ 篇首发文章将于近期上线，覆盖银发经济、AI 产业、城市更新等核心赛道。
+              后续内容将围绕城市更新、银发经济、AI产业研究与产业认知资产持续发布。
             </p>
           </div>
         </div>

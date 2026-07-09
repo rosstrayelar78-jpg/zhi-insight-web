@@ -51,7 +51,7 @@ export default function Header() {
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
           className="md:hidden text-gray-300 hover:text-white p-1"
-          aria-label="Toggle menu"
+          aria-label={mobileOpen ? "关闭导航菜单" : "打开导航菜单"}
           aria-expanded={mobileOpen}
         >
           {mobileOpen ? (

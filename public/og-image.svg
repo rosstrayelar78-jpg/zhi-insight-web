@@ -18,7 +18,7 @@
   <!-- Formula -->
   <text x="600" y="420" font-family="monospace" font-size="28" fill="#e94560" text-anchor="middle">V = P × J × A</text>
   <!-- Slogan -->
-  <text x="600" y="470" font-family="Noto Sans SC, sans-serif" font-size="20" fill="#666688" text-anchor="middle">识局 · 判势 · 定策 · 成事</text>
+  <text x="600" y="470" font-family="Noto Sans SC, sans-serif" font-size="20" fill="#777799" text-anchor="middle">发现规律 · 洞察未来 · 创造价值</text>
   <!-- Tagline -->
-  <text x="600" y="530" font-family="Noto Sans SC, sans-serif" font-size="18" fill="#555577" text-anchor="middle">AI 时代的产业智库</text>
+  <text x="600" y="530" font-family="Noto Sans SC, sans-serif" font-size="18" fill="#777799" text-anchor="middle">城市更新 · 银发经济 · AI产业研究咨询</text>
 </svg>

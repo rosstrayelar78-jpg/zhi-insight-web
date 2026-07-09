@@ -27,7 +27,7 @@ export default function AboutPage() {
         <div className="container-main max-w-3xl text-center">
           <h1>关于{siteConfig.name}</h1>
           <p className="mt-4 text-gray-300 text-lg">
-            AI 时代的产业智库 · 定义问题 · 创造价值
+            产业研究型咨询机构 · 定义问题 · 创造价值
           </p>
         </div>
       </section>
@@ -77,21 +77,26 @@ export default function AboutPage() {
         <div className="container-main max-w-4xl">
           <SectionHeading title="创始人" centered />
 
-          <div className="flex flex-col md:flex-row gap-10 items-start">
-            <div className="w-full md:w-64 shrink-0">
-              <div className="aspect-[4/5] bg-gradient-to-br from-primary to-primary-light rounded-card flex items-center justify-center text-gray-500 text-sm">
-                创始人照片
+          <div className="flex flex-col md:flex-row gap-10 items-center md:items-start">
+            <div className="w-full max-w-[280px] md:w-64 shrink-0">
+              <div className="relative aspect-[3/4] overflow-hidden">
+                <Image
+                  src="/images/team/li-qingguang-portrait-transparent.webp"
+                  alt="李青广，知璟远珩创始人。"
+                  fill
+                  sizes="(min-width: 768px) 256px, 280px"
+                  className="object-contain object-bottom"
+                />
               </div>
             </div>
             <div className="flex-1 space-y-5">
               <h2 className="text-2xl">{siteConfig.founder}</h2>
               <p className="text-accent font-medium">
-                产业研究者 · 项目定位专家 · 战略表达者
+                知璟远珩创始人 / 咨询实战专家
               </p>
               <p className="text-text-secondary leading-relaxed">
-                长期深耕产业研究、房地产咨询、项目定位与 AI 协同研究。
-                相信「问题定义」是一切价值创造的起点。
-                致力于将深度研究转化为可行动的判断与可输出的战略表达。
+                长期关注城市更新、商业地产、银发经济、AI产业研究与产业认知资产建设，
+                致力于以研究、洞察和AI协同推动产业价值创造。
               </p>
             </div>
           </div>

@@ -38,7 +38,7 @@ export default function ContactPage() {
 
               <div className="space-y-6">
                 <div>
-                  <p className="text-sm text-text-muted mb-1">邮箱</p>
+                  <p className="text-sm text-text-muted mb-1">商务合作</p>
                   <a
                     href={`mailto:${siteConfig.email}`}
                     className="text-primary hover:text-accent transition-colors font-medium break-all"

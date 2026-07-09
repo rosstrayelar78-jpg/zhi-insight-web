@@ -8,78 +8,134 @@ import { siteConfig } from "./site";
 // ─── Core Capabilities (首页模块3) ──────────
 export const capabilities = [
   {
-    icon: "🎯",
+    icon: "focus",
     title: "问题定义",
     desc: "不急于给答案。我们花时间搞清楚什么才是真正值得回答的问题。",
   },
   {
-    icon: "⚖️",
+    icon: "scale",
     title: "独立判断",
     desc: "不依附利益集团，不追逐热点。所有结论只对事实和逻辑负责。",
   },
   {
-    icon: "📐",
+    icon: "drafting-compass",
     title: "方案设计",
     desc: "不空谈趋势。我们产出可执行的策略、可输出的表达、可落地的路径。",
   },
   {
-    icon: "🚀",
+    icon: "route",
     title: "推动行动",
     desc: "研究不以报告为终点。我们的交付包含从认知到执行的完整链路。",
   },
 ];
 
-// ─── Research Tracks (研究方向 / 首页模块4) ──
-export const researchTracks = [
+// ─── Core Businesses (首页与服务页) ────────
+export const coreBusinesses = [
   {
-    slug: "silver-economy",
-    title: "银发经济",
-    desc: "中国正在经历人类历史上规模最大的老龄化进程，追踪从消费到金融的全链路机会。",
+    slug: "urban-renewal",
+    icon: "building-2",
+    title: "城市更新与存量资产价值重构",
+    desc: "中国城市正从增量扩张转向存量运营。我们帮助客户在存量资产中发现被低估的价值，并将其转化为可执行的商业策略。",
+    services: [
+      "城市更新战略研究",
+      "存量资产诊断与价值重构",
+      "商业综合体定位与产品策略",
+      "TOD与片区综合开发研究",
+      "产业导入与招商策略",
+    ],
   },
   {
-    slug: "elderly-care",
-    title: "养老产业",
-    desc: "从政策驱动到市场驱动，关注社区养老、机构养老、智慧养老三大方向的结构性变化。",
+    slug: "silver-economy",
+    icon: "heart-handshake",
+    title: "银发经济与长寿社会研究",
+    desc: "从老龄化到长寿社会，我们研究的是中国未来三十年的社会基础设施重构。",
+    services: [
+      "银发经济产业链与政策研究",
+      "长寿社会公共服务体系规划",
+      "居家养老与社区养老模式研究",
+      "长护险与支付体系研究",
+      "AI+养老与智慧养老服务研究",
+    ],
   },
   {
     slug: "ai-industry",
-    title: "AI 产业",
-    desc: "AI 正从技术爆发期走向产业渗透期，关注大模型在垂直行业的落地路径与商业模式变迁。",
+    icon: "bot",
+    title: "AI产业研究与智能化应用",
+    desc: "我们不训练大模型。我们研究AI如何改变产业逻辑，并用AI工具提升研究质量与效率。",
+    services: [
+      "AI产业趋势与商业落地研究",
+      "AI Agent与产业应用场景分析",
+      "AI协同研究工具链建设",
+      "AI治理体系与合规材料建设",
+      "产业认知生产与数据库建设",
+    ],
   },
+  {
+    slug: "knowledge-assets",
+    icon: "library-big",
+    title: "产业认知资产与咨询服务",
+    desc: "把一次性项目经验沉淀为可复用的方法论、数据库、案例库和AI工具链。",
+    services: [
+      "产业研究报告",
+      "项目定位与策略咨询",
+      "方法论体系建设",
+      "产业数据库建设",
+      "企业认知资产库建设",
+    ],
+  },
+];
+
+// ─── Research Tags (研究索引，不作为核心业务) ─
+export const researchTags = [
   {
     slug: "urban-renewal",
     title: "城市更新",
-    desc: "中国城市从增量扩张进入存量运营时代，研究商业模式、政策框架与资产价值重估。",
+    desc: "存量资产、商业更新、片区开发、产业导入与运营策略。",
+  },
+  {
+    slug: "silver-economy",
+    title: "银发经济与长寿社会",
+    desc: "人口结构、公共服务、社区养老、支付体系与养老科技。",
+  },
+  {
+    slug: "ai-industry",
+    title: "AI产业与智能化应用",
+    desc: "AI Agent、产业场景、研究工具链、治理与合规。",
+  },
+  {
+    slug: "knowledge-assets",
+    title: "产业认知资产",
+    desc: "方法论、数据库、案例库、知识库与企业认知资产建设。",
   },
   {
     slug: "industrial-park",
     title: "产业园区",
-    desc: "产业园区正从「收租逻辑」走向「运营逻辑」，关注定位重构、招商策略与数字化升级。",
+    desc: "产业定位、园区更新、招商策略、运营体系与创新生态。",
   },
   {
     slug: "robotics",
-    title: "机器人",
-    desc: "机器人与人协同工作的时代正在到来，关注服务机器人、工业机器人及关键零部件的投资逻辑。",
+    title: "机器人与智能设备",
+    desc: "作为AI产业的延伸方向，关注服务机器人与产业应用。",
   },
   {
     slug: "industrial-metals",
     title: "工业金属",
-    desc: "工业金属是制造业的基础，也是大国博弈的资源锚点，关注供需结构、地缘政治与技术替代。",
+    desc: "作为产业观察标签，关注供需结构、资源安全与技术替代。",
   },
   {
     slug: "corporate-research",
     title: "企业研究",
-    desc: "以深度研究驱动企业决策，提供标杆企业分析、竞争格局梳理与战略盲区识别。",
+    desc: "标杆企业分析、竞争格局、战略议题与认知资产沉淀。",
   },
   {
     slug: "new-quality-productivity",
     title: "新质生产力",
-    desc: "从产业落地、要素重组、效率跃迁三个维度解构新质生产力的真实内涵。",
+    desc: "作为政策与产业研究标签，关注要素重组与效率跃迁。",
   },
   {
     slug: "investment-opportunities",
     title: "产业投资机会",
-    desc: "在结构性变化中寻找超预期的投资机会，识别被低估的赛道、被忽视的信号与被误解的资产。",
+    desc: "作为趋势研究标签，识别结构变化中的产业机会与风险。",
   },
 ];
 
@@ -90,77 +146,66 @@ export const topics = [
     title: "银发经济全景研究",
     desc: "从人口结构到消费变迁，从政策框架到商业机会——银发经济的完整拼图。",
     status: "持续更新中",
-    articleCount: 12,
   },
   {
     slug: "ai-industry-penetration",
     title: "AI 产业渗透报告",
     desc: "AI 最大的机会不在技术本身，而在其对传统行业的重塑。聚焦大模型与 AI Agent 的落地实况。",
     status: "持续更新中",
-    articleCount: 10,
   },
   {
     slug: "urban-renewal-whitepaper",
     title: "中国城市更新白皮书",
     desc: "从增量到存量，中国城市正在经历百年未有的资产价值重估。",
     status: "持续更新中",
-    articleCount: 8,
   },
   {
     slug: "robotics-industry-observation",
     title: "机器人产业观察",
     desc: "服务机器人与工业机器人正在两条不同的路径上加速，追踪产业链的结构性变化与关键节点。",
     status: "筹备中",
-    articleCount: 5,
   },
   {
     slug: "new-quality-productivity-deep-dive",
     title: "新质生产力深度解构",
     desc: "新质生产力不是政策术语，是产业落地逻辑。从要素重组、效率跃迁、制度破壁三个维度理解中国新引擎。",
     status: "筹备中",
-    articleCount: 6,
   },
   {
     slug: "industrial-metals-cycle-report",
     title: "工业金属周期报告",
     desc: "工业金属是制造业的基石，也是大国博弈的锚点，追踪供需结构、地缘政治与技术替代的交叉影响。",
     status: "筹备中",
-    articleCount: 6,
   },
   {
     slug: "industrial-park-evolution",
     title: "产业园区进化论",
     desc: "从土地经济到运营经济，产业园区的商业模式正在被彻底重构。",
     status: "筹备中",
-    articleCount: 6,
   },
   {
     slug: "ai-think-tank-methodology",
-    title: "AI 时代产业智库方法论",
+    title: "AI 时代产业咨询方法论",
     desc: "AI 改变了研究的速度，但没有改变研究的本质。分享研究工具、分析框架和思维模型。",
     status: "筹备中",
-    articleCount: 5,
   },
   {
     slug: "china-corporate-strategy",
     title: "中国企业战略研究",
     desc: "以深度研究驱动企业决策，提供标杆企业分析、竞争格局梳理与战略盲区识别。",
     status: "筹备中",
-    articleCount: 8,
   },
   {
     slug: "industry-investment-map",
     title: "产业投资机会地图",
     desc: "在结构性变化中寻找超预期的投资机会。",
     status: "筹备中",
-    articleCount: 8,
   },
   {
     slug: "annual-trend-report-2026",
     title: "2026 年度产业趋势报告",
-    desc: "每年初发布，覆盖十大重点赛道的年度趋势判断——知璟远珩最重要的旗舰产品。",
-    status: "年度旗舰",
-    articleCount: 11,
+    desc: "围绕核心业务方向形成年度趋势判断与专题研究。",
+    status: "年度研究",
   },
 ];
 
@@ -200,38 +245,43 @@ export const articles = [
   },
 ];
 
-// ─── Services (服务能力) ────────────────────
-export const services = [
+// ─── Representative Research ───────────────
+export const representativeResearch = [
   {
-    icon: "📊",
-    title: "产业研究与趋势研判",
-    desc: "为企业和投资机构提供深度产业研究报告、竞争格局分析和趋势预判。",
-    fit: "适合：战略规划、投资决策、赛道评估",
+    title: "超大型交通枢纽站前综合开发定位研究",
+    category: "城市更新与综合开发",
+    excerpt:
+      "围绕综合交通枢纽站前区域，开展产业定位、功能布局、商务生态与城市门户价值研究。",
   },
   {
-    icon: "🧭",
-    title: "项目定位与商业模式设计",
-    desc: "为具体项目提供精准定位、商业模式重构和差异化策略设计。",
-    fit: "适合：新区开发、产业园定位、城市更新项目、新业务孵化",
+    title: "虹桥核心区商业综合体产品策略研究",
+    category: "商业综合体策略",
+    excerpt:
+      "围绕城市综合体项目，开展商业定位、大平层产品策略、招商逻辑与资产价值体系研究。",
   },
   {
-    icon: "✍️",
-    title: "战略表达与内容输出",
-    desc: "将复杂的研究结论转化为可传播、可说服、可打动的战略表达。",
-    detail: "包括：PPT 体系设计、品牌叙事构建、关键发布稿撰写。",
-    fit: "适合：上市路演、政府汇报、品牌升级、战略发布",
+    title: "浦东科创产业园区更新策略研究",
+    category: "产业园区更新",
+    excerpt:
+      "围绕产业园区转型升级，开展产业定位、科技创新、中试平台与产业生态体系研究。",
   },
   {
-    icon: "🤖",
-    title: "AI 协同研究支持",
-    desc: "利用 AI 工具链辅助研究全流程：数据采集、分析框架搭建、报告生成、观点验证。",
-    fit: "适合：研究团队效率升级、研究流程数字化",
+    title: "中国长寿社会现代化系统工程研究",
+    category: "长寿社会研究",
+    excerpt:
+      "围绕人口结构重构、城市现代化与国家治理能力，开展长寿社会现代化系统工程研究。",
   },
   {
-    icon: "🤝",
-    title: "定制化智库服务",
-    desc: "长期顾问式合作，为企业提供持续性的产业跟踪、竞争监测和战略议题判断。",
-    fit: "适合：需要持续产业判断支撑的企业与机构",
+    title: "银发经济产业平台研究",
+    category: "银发经济",
+    excerpt:
+      "围绕养老服务、健康管理、康养旅居、养老科技和智慧养老，开展银发经济产业平台研究。",
+  },
+  {
+    title: "AI赋能产业研究成果检索系统",
+    category: "AI与认知资产",
+    excerpt:
+      "围绕AI Agent、文件检索、知识库和成果管理，探索AI提升产业研究效率的工具体系。",
   },
 ];
 
@@ -274,19 +324,19 @@ export const methodologySteps = [
 // ─── SEO Metadata per page ──────────────────
 export const pageMetadata = {
   home: {
-    title: `${siteConfig.name} ${siteConfig.nameEn} — AI 时代的产业智库`,
+    title: "知璟远珩｜城市更新、银发经济与AI产业研究咨询",
     description: siteConfig.description,
-    keywords: "知璟远珩, ZHI Insight, 产业研究, 产业智库, AI 研究, 李青广, 银发经济研究, 城市更新咨询, 产业趋势分析, AI 时代咨询, 产业投资研究",
+    keywords: "知璟远珩, 城市更新咨询, 银发经济研究, AI产业研究, 产业认知资产, 咨询管理公司, 李青广",
   },
   about: {
-    title: `关于${siteConfig.name} — AI 时代产业智库 | ${siteConfig.nameEn}`,
-    description: `${siteConfig.name}（${siteConfig.nameEn}）面向 AI 时代的新型产业智库。创始人${siteConfig.founder}。核心理念：不追热点追结构，研究以落地为终点。`,
-    keywords: `知璟远珩关于我们, ${siteConfig.founder}, ${siteConfig.nameEn}团队, 产业智库, 新型智库, AI时代咨询`,
+    title: `关于${siteConfig.name} — 产业研究型咨询机构 | ${siteConfig.nameEn}`,
+    description: `${siteConfig.name}是一家聚焦城市更新、银发经济、AI产业研究与产业认知资产建设的咨询管理公司。创始人${siteConfig.founder}。`,
+    keywords: `知璟远珩关于我们, ${siteConfig.founder}, ${siteConfig.nameEn}, 产业研究型咨询机构, 咨询管理公司`,
   },
   research: {
-    title: `研究方向 — ${siteConfig.name} ${siteConfig.nameEn}`,
-    description: `${siteConfig.name}覆盖十大产业赛道：银发经济、养老产业、AI 产业、城市更新、产业园区、机器人、工业金属、企业研究、新质生产力、产业投资机会。`,
-    keywords: "银发经济研究, 养老产业分析, AI产业报告, 城市更新研究, 产业园区咨询, 机器人产业分析, 工业金属研究, 新质生产力报告",
+    title: `研究索引 — ${siteConfig.name} ${siteConfig.nameEn}`,
+    description: `${siteConfig.name}围绕城市更新、银发经济、AI产业与产业认知资产开展核心研究，并持续跟踪相关产业标签。`,
+    keywords: "城市更新研究, 银发经济研究, AI产业报告, 产业认知资产, 产业园区咨询, 企业研究",
   },
   methodology: {
     title: `研究方法论 — ${siteConfig.name} ${siteConfig.nameEn}`,
@@ -300,12 +350,12 @@ export const pageMetadata = {
   },
   services: {
     title: `服务能力 — ${siteConfig.name} ${siteConfig.nameEn}`,
-    description: `${siteConfig.name}提供五大核心服务：产业研究与趋势研判、项目定位与商业模式设计、战略表达与内容输出、AI 协同研究支持、定制化智库服务。`,
-    keywords: "产业研究服务, 战略咨询, 项目定位, 商业模式设计, PPT体系设计, AI辅助研究, 智库服务",
+    description: `${siteConfig.name}提供城市更新、银发经济、AI产业研究与产业认知资产四大核心咨询服务。`,
+    keywords: "城市更新咨询, 银发经济研究, AI产业咨询, 产业认知资产, 项目定位, 产业数据库",
   },
   contact: {
     title: `联系我们 — ${siteConfig.name} ${siteConfig.nameEn}`,
     description: `与${siteConfig.name}开启对话。无论您需要产业趋势的独立判断、战略方向的清晰表达，还是研究驱动的行动方案。`,
-    keywords: `联系${siteConfig.name}, 业务合作, 产业研究咨询, 项目合作, 智库服务`,
+    keywords: `联系${siteConfig.name}, 业务合作, 产业研究咨询, 项目合作, 咨询服务`,
   },
 };

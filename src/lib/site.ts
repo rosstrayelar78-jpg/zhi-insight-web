@@ -5,21 +5,24 @@
 export const siteConfig = {
   name: "知璟远珩",
   nameEn: "ZHI Insight",
-  tagline: "AI 驱动的产业研究与价值创造平台",
-  slogan: "识局 · 判势 · 定策 · 成事",
+  companyName: "上海知璟远珩咨询管理有限公司",
+  tagline: "以研究驱动产业价值创造的咨询管理机构",
+  slogan: "发现规律 · 洞察未来 · 创造价值",
   sloganEn: "See Clear · Judge Right · Act Decisive",
   description:
-    "知璟远珩（ZHI Insight）是一家面向 AI 时代的产业研究与价值创造平台。我们提供产业研究、趋势判断、项目定位、战略表达等专业服务。核心公式：价值创造 = 问题质量 × 判断能力 × 行动能力。",
+    "知璟远珩是一家聚焦城市更新、银发经济、AI产业研究与产业认知资产建设的咨询管理公司，以研究、洞察和AI协同推动产业价值创造。",
   url: "https://www.zhiinsight.com",
   founder: "李青广",
-  email: "contact@zhiinsight.com",
-  wechat: "知璟远珩",
+  email: "zhiinsight@sina.com",
+  wechat: "世势咨询",
   planet: "知璟远珩产业圈",
+  icpNumber: "沪ICP备2026031662号-1",
 };
 
 export const navigation = [
   { label: "首页", href: "/" },
-  { label: "研究方向", href: "/research" },
+  { label: "服务能力", href: "/services" },
+  { label: "代表研究", href: "/representative-research" },
   { label: "方法论", href: "/methodology" },
   { label: "文章", href: "/insights" },
   { label: "关于我们", href: "/about" },
@@ -28,10 +31,14 @@ export const navigation = [
 
 export const footerLinks = [
   { label: "首页", href: "/" },
+  { label: "服务能力", href: "/services" },
+  { label: "代表研究", href: "/representative-research" },
   { label: "研究方向", href: "/research" },
   { label: "方法论", href: "/methodology" },
   { label: "文章", href: "/insights" },
+  { label: "产业专题", href: "/topics" },
   { label: "关于我们", href: "/about" },
-  { label: "服务能力", href: "/services" },
   { label: "联系我们", href: "/contact" },
+  { label: "隐私政策", href: "/privacy" },
+  { label: "免责声明", href: "/disclaimer" },
 ];

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, FormEvent } from "react";
+import { siteConfig } from "@/lib/site";
 
 const consultationTypes = [
   "产业研究合作",
@@ -15,8 +16,23 @@ export default function ContactForm() {
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // TODO: wire to actual email service (Formspree / custom API)
-    // For now just show success state
+    const form = new FormData(e.currentTarget);
+    const subject = encodeURIComponent(
+      `官网咨询：${String(form.get("type") || "业务合作")}`,
+    );
+    const body = encodeURIComponent(
+      [
+        `姓名：${String(form.get("name") || "")}`,
+        `机构/公司：${String(form.get("company") || "")}`,
+        `职位：${String(form.get("position") || "")}`,
+        `联系邮箱：${String(form.get("email") || "")}`,
+        `咨询类型：${String(form.get("type") || "")}`,
+        "",
+        String(form.get("message") || ""),
+      ].join("\n"),
+    );
+
+    window.location.href = `mailto:${siteConfig.email}?subject=${subject}&body=${body}`;
     setSubmitted(true);
   };
 
@@ -26,16 +42,22 @@ export default function ContactForm() {
         <div className="p-10 bg-emerald-50 border border-emerald-200 rounded-card text-center">
           <p className="text-3xl mb-4">✓</p>
           <h3 className="font-bold text-lg text-emerald-800 mb-2">
-            提交成功
+            邮件客户端已打开
           </h3>
           <p className="text-sm text-emerald-600">
-            感谢您的来信！我们会尽快回复您。
+            请在邮件客户端中确认内容并发送。邮件未发送前，我们不会收到您的信息。
           </p>
+          <a
+            href={`mailto:${siteConfig.email}`}
+            className="block mt-3 text-sm text-emerald-700 underline hover:no-underline"
+          >
+            直接联系 {siteConfig.email}
+          </a>
           <button
             onClick={() => setSubmitted(false)}
             className="mt-6 text-sm text-emerald-700 underline hover:no-underline"
           >
-            提交另一条消息
+            返回表单
           </button>
         </div>
       ) : (
@@ -91,7 +113,7 @@ export default function ContactForm() {
                 name="email"
                 required
                 type="email"
-                placeholder="your@email.com"
+                placeholder="请输入您的邮箱"
                 className="w-full px-4 py-2.5 bg-bg-warm border border-border-light rounded focus:outline-none focus:border-accent text-sm transition-colors"
               />
             </div>
@@ -137,7 +159,7 @@ export default function ContactForm() {
             type="submit"
             className="w-full sm:w-auto px-10 py-3.5 bg-accent hover:bg-accent-hover text-white rounded transition-colors font-medium text-sm cursor-pointer"
           >
-            提交消息 →
+            打开邮件客户端 →
           </button>
         </form>
       )}
