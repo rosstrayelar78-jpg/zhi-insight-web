@@ -28,7 +28,7 @@ const jsonLd = {
       name: siteConfig.companyName,
       alternateName: [siteConfig.name, siteConfig.nameEn],
       url: siteConfig.url,
-      logo: `${siteConfig.url}/logo-star.png`,
+      logo: `${siteConfig.url}/logo-star-transparent.png`,
       founder: {
         "@type": "Person",
         name: siteConfig.founder,
@@ -101,7 +101,7 @@ export default function RootLayout({
           跳转到主要内容
         </a>
         <Header />
-        <main id="main-content" className="flex-1 pt-16 md:pt-[72px]">{children}</main>
+        <main id="main-content" className="flex-1 pt-20 md:pt-24">{children}</main>
         <Footer />
         <script
           type="application/ld+json"

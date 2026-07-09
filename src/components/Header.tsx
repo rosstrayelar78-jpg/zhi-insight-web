@@ -17,15 +17,15 @@ export default function Header() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-primary/95 backdrop-blur-sm border-b border-white/5">
-      <div className="container-main flex items-center justify-between h-16 md:h-18">
+      <div className="container-main flex items-center justify-between h-20 md:h-24">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2.5 shrink-0">
           <Image
-            src="/logo-star.png"
+            src="/logo-star-transparent-dark.png"
             alt={`${siteConfig.name} ${siteConfig.nameEn}`}
-            width={180}
-            height={60}
-            className="h-10 md:h-11 w-auto object-contain"
+            width={240}
+            height={80}
+            className="h-16 md:h-20 w-auto object-contain"
             priority
           />
         </Link>
