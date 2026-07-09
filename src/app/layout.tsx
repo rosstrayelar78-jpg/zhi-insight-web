@@ -28,7 +28,7 @@ const jsonLd = {
       name: siteConfig.companyName,
       alternateName: [siteConfig.name, siteConfig.nameEn],
       url: siteConfig.url,
-      logo: `${siteConfig.url}/logo.png`,
+      logo: `${siteConfig.url}/logo-star.png`,
       founder: {
         "@type": "Person",
         name: siteConfig.founder,

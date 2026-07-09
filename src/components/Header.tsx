@@ -21,11 +21,11 @@ export default function Header() {
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2.5 shrink-0">
           <Image
-            src="/logo.png"
+            src="/logo-star.png"
             alt={`${siteConfig.name} ${siteConfig.nameEn}`}
-            width={120}
-            height={40}
-            className="h-9 w-auto object-contain"
+            width={180}
+            height={60}
+            className="h-10 md:h-11 w-auto object-contain"
             priority
           />
         </Link>
